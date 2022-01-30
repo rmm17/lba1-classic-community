@@ -1,2 +1,7 @@
 234,Collision Damage On
 34,Collision Damage Off
+9150,"This is a customized text for the introduction of the game.
+The text follows the extended ASCII standard."
+9151,"It is possible to add new text to the game's dialogs
+By editing the community ctxt files."
+9152,Maybe a small step forward to creating a mod.

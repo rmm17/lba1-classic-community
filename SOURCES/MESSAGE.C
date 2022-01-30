@@ -1142,13 +1142,26 @@ void    DefWinDial( LONG x0, LONG y0, LONG x1, LONG y1 )
 
 void	CommonOpenDial( LONG text )
 {
+	WORD foundCustomText = 0;
+	char *customText;
+
 	CloseDial()             ;
-	if ( !GetText( text ))  return  ;
+
+	if ( !GetText( text )) 
+	{
+		customText = GetCustomizedMultiText( text );
+
+		if (!customText)
+			return;
+
+		foundCustomText = 1;
+	}
+
 	CurrentDial = text      ;
 	X_Dial = Dial_X0+8      ;
 	Y_Dial = Dial_Y0+8      ;
 	NbLineDial = 0          ;
-	PtDial = PtText		;
+	PtDial = foundCustomText ? customText : PtText 	;
 	*Word = 0               ;
 	PtWord = Word           ;
 	*BufLine = 0            ;

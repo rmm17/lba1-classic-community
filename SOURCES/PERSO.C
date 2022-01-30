@@ -233,7 +233,7 @@ void	Introduction()
 		BigWinDial() ;
 		TestCoulDial( 15 ) ;
 
-		Dial( 150 ) ;
+		Dial( 9150 ) ;
 		if( Key == K_ESC )	goto fin_intro ;
 
 		SetBlackPal() ;
@@ -243,7 +243,7 @@ void	Introduction()
 		Flip() ;
 		Palette( PalettePcx ) ;
 
-		Dial( 151 ) ;
+		Dial( 9151 ) ;
 		if( Key == K_ESC )	goto fin_intro ;
 
 		SetBlackPal() ;
@@ -254,7 +254,7 @@ void	Introduction()
 		Palette( PalettePcx ) ;
 
 		FlecheForcee = FALSE ;
-		Dial( 152 ) ;
+		Dial( 9152 ) ;
 
 fin_intro:
 		FlecheForcee = FALSE ;
